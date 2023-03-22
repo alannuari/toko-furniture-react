@@ -140,7 +140,3 @@ button[disabled] {
 .suggestion::-webkit-scrollbar {
     height: 0;
 }
-/* .class::-webkit-scrollbar-thumb {
-    background: #dbdbdb;
-    border-radius: 5px;
-} */

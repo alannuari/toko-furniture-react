@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getMeta, postCheckout } from '../api';
+import { getMeta, postCheckout } from '../mockupApi';
 import useAsync from '../helpers/hooks/useAsync';
 import useForm from '../helpers/hooks/useForm';
 import { useGlobalContext } from '../helpers/hooks/useGlobalContext';

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getCategories } from '../api';
+import { getCategories } from '../mockupApi';
 import useAsync from '../helpers/hooks/useAsync';
 import BrowseRoomSkeleton from './BrowseRoomSkeleton';
 import '../helpers/format/thousand';

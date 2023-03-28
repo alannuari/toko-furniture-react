@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductDetails } from '../api';
+import { getProductDetails } from '../mockupApi';
 import Breadcrump from '../components/Breadcrump';
 import ErrorMessage from '../components/ErrorMessage';
 import Footer from '../components/Footer';

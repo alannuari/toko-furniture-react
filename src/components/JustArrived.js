@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getProducts } from '../api';
+import { getProducts } from '../mockupApi';
 import useAsync from '../helpers/hooks/useAsync';
 import JustArrivedSkeleton from './JustArrivedSkeleton';
 import '../helpers/format/currency';

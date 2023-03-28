@@ -37,7 +37,7 @@ const BrowseRoomSkeleton = ({ ratio }) => {
             <div className="bg-gray-300 rounded-lg w-full h-full animate-pulse">
                 <div className={`overlay ${ratio.meta[item.ratio.md]}`}>
                     <div className="w-24 h-3 bg-gray-400 mt-3 rounded-full animate-pulse"></div>
-                    <div className="w-36 h-3 bg-gray-400 mt-2 rounded-full animate-pulse"></div>
+                    <div className="w-32 h-3 bg-gray-400 mt-2 rounded-full animate-pulse"></div>
                 </div>
             </div>
         </div>

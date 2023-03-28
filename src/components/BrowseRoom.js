@@ -24,8 +24,8 @@ const BrowseRoom = () => {
             },
         },
         meta: {
-            '1/9': 'left-0 top-0 bottom-0 flex justify-center flex-col pl-48 md:pl-72',
-            '1/4': 'left-0 top-0 bottom-0 flex justify-center flex-col pl-48 md:pl-72',
+            '1/9': 'left-0 top-0 bottom-0 flex justify-center flex-col pl-48 md:pl-55',
+            '1/4': 'left-0 top-0 bottom-0 flex justify-center flex-col pl-48 md:pl-55',
             '2/2': 'inset-0 md:bottom-auto flex justify-center md:items-center flex-col pl-48 md:pl-0 pt-0 md:pt-12',
             '2/3': 'inset-0 md:bottom-auto flex justify-center md:items-center flex-col pl-48 md:pl-0 pt-0 md:pt-12',
         },

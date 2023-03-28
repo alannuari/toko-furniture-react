@@ -3,6 +3,7 @@ import { Courier } from '../models/Courier';
 import { DetailsProduct } from '../models/DetailsProduct';
 import { Payment } from '../models/Payment';
 import { Product } from '../models/Product';
+import { RelatedProducts } from '../models/RelatedProducts';
 
 export const products = {
     data: [
@@ -53,41 +54,12 @@ export const detailsProduct = {
                 'https://luxspace-html.netlify.app/images/content/showcase-1.side.jpg',
                 'https://luxspace-html.netlify.app/images/content/showcase-1.top.jpg',
             ],
-            {
-                id: 1,
-                title: 'Living Room',
-                products: 18309,
-                imageUrl: 'image-catalog-1.png',
-            },
+            new Category(1, 'Living Room', 18309, 'image-catalog-1.png'),
             [
-                {
-                    id: 1,
-                    idc: '1',
-                    title: 'Cangkir Mauttie',
-                    price: 89300000,
-                    imageUrl: 'https://luxspace-html.netlify.app/images/content/chair-1.png',
-                },
-                {
-                    id: 2,
-                    idc: '1',
-                    title: 'Saman Kakka',
-                    price: 14500399,
-                    imageUrl: 'https://luxspace-html.netlify.app/images/content/chair-2.png',
-                },
-                {
-                    id: 3,
-                    idc: '1',
-                    title: 'Lino Dino',
-                    price: 22000000,
-                    imageUrl: 'https://luxspace-html.netlify.app/images/content/chair-3.png',
-                },
-                {
-                    id: 4,
-                    idc: '1',
-                    title: 'Syail Ammeno',
-                    price: 6399999,
-                    imageUrl: 'https://luxspace-html.netlify.app/images/content/chair-4.png',
-                },
+                new RelatedProducts(1, '1', 'Cangkir Mauttie', 89300000, 'https://luxspace-html.netlify.app/images/content/chair-1.png'),
+                new RelatedProducts(2, '1', 'Saman Kakka', 14500399, 'https://luxspace-html.netlify.app/images/content/chair-2.png'),
+                new RelatedProducts(3, '1', 'Lino Dino', 22000000, 'https://luxspace-html.netlify.app/images/content/chair-3.png'),
+                new RelatedProducts(4, '1', 'Syail Ammeno', 6399999, 'https://luxspace-html.netlify.app/images/content/chair-4.png'),
             ]
         ),
         new DetailsProduct(
@@ -102,36 +74,12 @@ export const detailsProduct = {
                 'https://luxspace-html.netlify.app/images/content/showcase-1.side.jpg',
                 'https://luxspace-html.netlify.app/images/content/showcase-1.top.jpg',
             ],
-            { id: 1, title: 'Living Room', products: 18309, imageUrl: 'image-catalog-1.png' },
+            new Category(1, 'Living Room', 18309, 'image-catalog-1.png'),
             [
-                {
-                    id: 1,
-                    idc: '1',
-                    title: 'Cangkir Mauttie',
-                    price: 89300000,
-                    imageUrl: 'https://luxspace-html.netlify.app/images/content/chair-1.png',
-                },
-                {
-                    id: 2,
-                    idc: '1',
-                    title: 'Saman Kakka',
-                    price: 14500399,
-                    imageUrl: 'https://luxspace-html.netlify.app/images/content/chair-2.png',
-                },
-                {
-                    id: 3,
-                    idc: '1',
-                    title: 'Lino Dino',
-                    price: 22000000,
-                    imageUrl: 'https://luxspace-html.netlify.app/images/content/chair-3.png',
-                },
-                {
-                    id: 4,
-                    idc: '1',
-                    title: 'Syail Ammeno',
-                    price: 6399999,
-                    imageUrl: 'https://luxspace-html.netlify.app/images/content/chair-4.png',
-                },
+                new RelatedProducts(1, '1', 'Cangkir Mauttie', 89300000, 'https://luxspace-html.netlify.app/images/content/chair-1.png'),
+                new RelatedProducts(2, '1', 'Saman Kakka', 14500399, 'https://luxspace-html.netlify.app/images/content/chair-2.png'),
+                new RelatedProducts(3, '1', 'Lino Dino', 22000000, 'https://luxspace-html.netlify.app/images/content/chair-3.png'),
+                new RelatedProducts(4, '1', 'Syail Ammeno', 6399999, 'https://luxspace-html.netlify.app/images/content/chair-4.png'),
             ]
         ),
     ],

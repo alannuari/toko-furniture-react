@@ -5,7 +5,6 @@ export class DetailsProduct {
         this.title = title;
         this.description = description;
         this.imgUrls = imgUrls;
-        this.imgUrls = imgUrls;
         this.category = category;
         this.relatedProducts = relatedProducts;
     }

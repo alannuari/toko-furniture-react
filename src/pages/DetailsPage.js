@@ -37,12 +37,12 @@ const DetailsPage = () => {
                     <ProductDetailsSkeleton />
                     <SuggestionSkeleton />
                 </>
-            ) : !data?.[0] ? (
+            ) : !data ? (
                 <ErrorMessage title="Product Not Found" body={`Sorry, product with ID ${idp} is not found`} />
             ) : (
                 <>
-                    <ProductDetails data={data?.[0]} />
-                    <Suggestion data={data?.[0].relatedProducts} />
+                    <ProductDetails data={data} />
+                    <Suggestion data={data?.relatedProducts} />
                 </>
             )}
             <Sitemap />

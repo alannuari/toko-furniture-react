@@ -137,7 +137,7 @@ const ShippingDetails = () => {
                                               }
                                               className={`border border-gray-200 flex items-center justify-center rounded-xl bg-white w-full h-full ${item.id === payload.courier ? 'border-2 border-pink-300' : ''}`}
                                           >
-                                              <img src={item.imgUrl} alt={item.name} className="object-contain max-h-full" />
+                                              <img src={item.imageUrl} alt={item.name} className="object-contain max-h-full" />
                                           </button>
                                       </div>
                                   ))}
@@ -171,7 +171,7 @@ const ShippingDetails = () => {
                                               }
                                               className={`border border-gray-200 flex items-center justify-center rounded-xl bg-white w-full h-full ${item.id === payload.payment ? 'border-2 border-pink-300' : ''}`}
                                           >
-                                              <img src={item.imgUrl} alt={item.name} className="object-contain max-h-full" />
+                                              <img src={item.imageUrl} alt={item.name} className="object-contain max-h-full" />
                                           </button>
                                       </div>
                                   ))}

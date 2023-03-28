@@ -20,14 +20,14 @@ const ProductDetails = ({ data }) => {
                             {data.imgUrls?.map((item, idx) => (
                                 <div key={idx} className="px-2" onClick={() => setSlider(item)}>
                                     <div className={`item ${slider === item ? 'selected' : ''}`} data-img={item}>
-                                        <img src={item} alt="front" className="object-cover w-full h-full rounded-lg" />
+                                        <img src={item} alt={item.split('.')[3]} className="object-cover w-full h-full rounded-lg" />
                                     </div>
                                 </div>
                             ))}
                         </div>
                         <div className="preview">
                             <div className="item rounded-lg h-full overflow-hidden">
-                                <img src={slider} alt={slider} className="object-cover w-full h-full rounded-lg" />
+                                <img src={slider} alt={slider.split('.')[3]} className="object-cover w-full h-full rounded-lg" />
                             </div>
                         </div>
                     </div>

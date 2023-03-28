@@ -29,8 +29,10 @@ const ProductDetailsSkeleton = () => {
                     </div>
                 </div>
                 <div className="flex-1 px-4 md:p-6">
-                    <div className="w-80 h-16 bg-gray-300 animate-pulse rounded-full"></div>
-                    <div className="w-40 h-4 mt-4 bg-gray-300 animate-pulse rounded-full"></div>
+                    <div className="md:inline hidden">
+                        <div className="w-80 h-16 bg-gray-300 animate-pulse rounded-full"></div>
+                        <div className="w-40 h-4 mt-4 bg-gray-300 animate-pulse rounded-full"></div>
+                    </div>
 
                     <div className="w-44 h-10 mt-8 bg-gray-300 animate-pulse rounded-full"></div>
 

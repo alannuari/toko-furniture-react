@@ -33,8 +33,10 @@ const ProductDetails = ({ data }) => {
                     </div>
                 </div>
                 <div className="flex-1 px-4 md:p-6">
-                    <h2 className="text-5xl font-semibold">{data.title}</h2>
-                    <p className="text-xl">{data.price.currency()}</p>
+                    <div className="md:inline hidden">
+                        <h2 className="text-5xl font-semibold">{data.title}</h2>
+                        <p className="text-xl">{data.price.currency()}</p>
+                    </div>
 
                     <button
                         onClick={() =>

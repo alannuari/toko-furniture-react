@@ -67,7 +67,7 @@ const Header = ({ theme, position }) => {
                                 <button
                                     onClick={() => setToggleMenu((prev) => !prev)}
                                     id="menu-toggler"
-                                    className={['flex z-50 items-center justify-center w-8 h-8 text-black md:text-white focus:outline-none', toggleMenu ? 'fixed top-0 right-0' : 'relative', theme === 'white' ? 'md:text-white' : ''].join(
+                                    className={['flex z-50 items-center justify-center w-8 h-8 text-black md:text-white focus:outline-none', toggleMenu ? 'fixed top-5 right-5' : 'relative', theme === 'white' ? 'md:text-white' : ''].join(
                                         ' '
                                     )}
                                 >

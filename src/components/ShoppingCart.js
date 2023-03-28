@@ -51,7 +51,7 @@ const ShoppingCart = () => {
                         <div key={key} className="flex flex-start flex-wrap items-center mb-4 -mx-4" data-row={idx}>
                             <div className="px-4 flex-none">
                                 <div className="" style={{ width: 90, height: 90 }}>
-                                    <img src={item.imgUrls[0]} alt="chair-1" className="object-cover rounded-xl w-full h-full" />
+                                    <img src={item.imgUrls[0]} alt={item.title} className="object-cover rounded-xl w-full h-full" />
                                 </div>
                             </div>
                             <div className="px-4 w-auto flex-1 md:w-5/12">

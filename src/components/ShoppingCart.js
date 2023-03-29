@@ -57,7 +57,7 @@ const ShoppingCart = () => {
                             <div className="px-4 w-auto flex-1 md:w-5/12">
                                 <div className="">
                                     <h6 className="font-semibold text-lg md:text-xl leading-8">{item.title}</h6>
-                                    <span className="text-sm md:text-lg">{item.category.title}</span>
+                                    <span className="text-sm md:text-lg">{item.category}</span>
                                     <h6 className="font-semibold text-base md:text-lg block md:hidden">IDR {item.price}</h6>
                                 </div>
                             </div>

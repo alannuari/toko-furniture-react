@@ -1,11 +1,9 @@
 export class DetailsProduct {
-    constructor(id, price, title, description, imgUrls, category, relatedProducts) {
+    constructor(id, idp, description, imgUrls, relatedProducts) {
         this.id = id;
-        this.price = price;
-        this.title = title;
+        this.idp = idp;
         this.description = description;
         this.imgUrls = imgUrls;
-        this.category = category;
         this.relatedProducts = relatedProducts;
     }
 }

@@ -22,6 +22,7 @@ const DetailsPage = () => {
     }, [run, idp]);
 
     useScrollToTop();
+
     return (
         <>
             <Header theme="white" />

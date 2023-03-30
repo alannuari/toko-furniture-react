@@ -15,8 +15,7 @@ const CartPage = () => {
             <Breadcrump
                 list={[
                     { url: '/', name: 'Home' },
-                    { url: '/categories/1', name: 'Office Room' },
-                    { url: '/categories/1/products/1', name: 'Details' },
+                    { url: '/cart', name: 'Cart' },
                 ]}
             />
             <section className="md:py-16">

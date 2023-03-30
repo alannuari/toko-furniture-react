@@ -23,19 +23,19 @@ export const products = {
 
 export const categories = {
     data: [
-        new Category(1, 'Living Room', 18309, 'image-catalog-1.png', {
+        new Category(1, 'Living Room', 3, 'image-catalog-1.png', {
             default: '1/9',
             md: '1/4',
         }),
-        new Category(2, 'Children Room', 837, 'image-catalog-3.png', {
+        new Category(2, 'Children Room', 3, 'image-catalog-3.png', {
             default: '1/9',
             md: '2/2',
         }),
-        new Category(3, 'Decoration', 77392, 'image-catalog-4.png', {
+        new Category(3, 'Decoration', 3, 'image-catalog-4.png', {
             default: '1/9',
             md: '2/3',
         }),
-        new Category(4, 'Master Room', 22094, 'image-catalog-2.png', {
+        new Category(4, 'Master Room', 3, 'image-catalog-2.png', {
             default: '1/9',
             md: '1/4',
         }),

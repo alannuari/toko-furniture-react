@@ -12,6 +12,7 @@ import Suggestion from '../components/Suggestion';
 import SuggestionSkeleton from '../components/SuggestionSkeleton';
 import useAsync from '../helpers/hooks/useAsync';
 import useScrollToTop from '../helpers/hooks/useScrollToTop';
+import category from '../data/tr_category.json';
 
 const DetailsPage = () => {
     const { idc, idp } = useParams();
@@ -29,7 +30,7 @@ const DetailsPage = () => {
             <Breadcrump
                 list={[
                     { url: '/', name: 'Home' },
-                    { url: `/categories/${idc}`, name: 'Office Room' },
+                    { url: `/categories/${idc}`, name: category.data.find((item) => parseInt(item.id) === parseInt(idc))?.name },
                     { url: `/categories/${idc}/products/${idp}`, name: 'Details' },
                 ]}
             />

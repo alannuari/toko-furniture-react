@@ -9,6 +9,7 @@ import Sitemap from '../components/Sitemap';
 import useAsync from '../helpers/hooks/useAsync';
 import useScrollToTop from '../helpers/hooks/useScrollToTop';
 import { getProductsByCategory } from '../mockupApi';
+import category from '../data/tr_category.json';
 
 const CategoryPage = () => {
     const { idc } = useParams();
@@ -26,7 +27,7 @@ const CategoryPage = () => {
             <Breadcrump
                 list={[
                     { url: '/', name: 'Home' },
-                    { url: '/categories/1', name: 'Office Room' },
+                    { url: `/categories/${idc}`, name: category.data.find((item) => parseInt(item.id) === parseInt(idc))?.name },
                 ]}
             />
             <section className="md:py-16">

@@ -4,7 +4,7 @@ import '../helpers/format/currency';
 
 const CardItem = ({ idc, id: idp, title, imageUrl, price }) => {
     return (
-        <div className="px-4 relative card group">
+        <div className="px-4 relative card group my-5">
             <div className="rounded-xl overflow-hidden card-shadow relative" style={{ width: 287, height: 386 }}>
                 <div className="absolute opacity-0 group-hover:opacity-100 transition duration-200 flex items-center justify-center w-full h-full bg-black bg-opacity-30">
                     <div className="bg-white text-black rounded-full w-16 h-16 flex items-center justify-center">

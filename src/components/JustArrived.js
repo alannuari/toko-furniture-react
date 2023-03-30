@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { getProducts } from '../mockupApi';
 import useAsync from '../helpers/hooks/useAsync';
-import JustArrivedSkeleton from './JustArrivedSkeleton';
 import CardItem from './CardItem';
+import CardItemSkeleton from './CardItemSkeleton';
 
 const JustArrived = () => {
     const { data, run, isLoading } = useAsync();
@@ -22,17 +21,7 @@ const JustArrived = () => {
                 </div>
             </div>
             <div className="overflow-x-auto px-4 just-arrived">
-                {isLoading ? (
-                    <div className="flex -mx-4 flex-row relative">
-                        <JustArrivedSkeleton />
-                    </div>
-                ) : (
-                    <div className="flex -mx-4 flex-row relative">
-                        {data.data.map((item) => (
-                            <CardItem key={item.id} {...item} />
-                        ))}
-                    </div>
-                )}
+                <div className="flex -mx-4 flex-row relative">{isLoading ? <CardItemSkeleton amount={6} /> : data.data.map((item) => <CardItem key={item.id} {...item} />)}</div>
             </div>
         </section>
     );

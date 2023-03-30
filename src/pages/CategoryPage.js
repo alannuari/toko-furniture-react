@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Breadcrump from '../components/Breadcrump';
 import CardItem from '../components/CardItem';
+import CardItemSkeleton from '../components/CardItemSkeleton';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Sitemap from '../components/Sitemap';
@@ -30,15 +31,7 @@ const CategoryPage = () => {
             />
             <section className="md:py-16">
                 <div className="container mx-auto px-4">
-                    {isLoading ? (
-                        'loading'
-                    ) : (
-                        <div className="flex -mx-4 flex-wrap justify-center">
-                            {data.map((item) => (
-                                <CardItem key={item.id} {...item} />
-                            ))}
-                        </div>
-                    )}
+                    <div className="flex -mx-4 flex-wrap justify-center">{isLoading ? <CardItemSkeleton amount={3} /> : data.map((item) => <CardItem key={item.id} {...item} />)}</div>
                 </div>
             </section>
             <Sitemap />

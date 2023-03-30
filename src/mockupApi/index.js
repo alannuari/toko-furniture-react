@@ -15,4 +15,6 @@ const getProductDetails = async (id) =>
         category: categories.data.find((item) => parseInt(item.id) === parseInt(products.data.find((item) => parseInt(item.id) === parseInt(detailsProduct.data.find((item) => parseInt(item.id) === parseInt(id)).idp)).idc)).title,
     });
 
-export { getProducts, getCategories, getProductDetails, getMeta, postCheckout };
+const getProductsByCategory = async (id) => resolveWithDelay(products.data.filter((item) => parseInt(item.idc) === parseInt(id)));
+
+export { getProducts, getCategories, getProductDetails, getMeta, postCheckout, getProductsByCategory };

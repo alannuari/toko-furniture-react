@@ -11,7 +11,7 @@ const ProductDetails = ({ data }) => {
         <section className="container mx-auto">
             <div className="flex flex-wrap my-4 md:my-12">
                 <div className="w-full md:hidden px-4">
-                    <h2 className="text-5xl font-semibold">{data.title}</h2>
+                    <h2 className="text-5xl font-semibold mb-3">{data.title}</h2>
                     <span className="text-xl">{data.price.currency()}</span>
                 </div>
                 <div className="flex-1">
@@ -34,7 +34,7 @@ const ProductDetails = ({ data }) => {
                 </div>
                 <div className="flex-1 px-4 md:p-6">
                     <div className="md:inline hidden">
-                        <h2 className="text-5xl font-semibold">{data.title}</h2>
+                        <h2 className="text-5xl font-semibold  mb-3">{data.title}</h2>
                         <p className="text-xl">{data.price.currency()}</p>
                     </div>
 

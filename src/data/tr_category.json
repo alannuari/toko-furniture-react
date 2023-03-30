@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Living Room"
+        },
+        {
+            "id": 2,
+            "name": "Children Room"
+        },
+        {
+            "id": 3,
+            "name": "Decoration"
+        },
+        {
+            "id": 4,
+            "name": "Master Room"
+        }
+    ]
+}

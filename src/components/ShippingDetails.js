@@ -4,6 +4,8 @@ import { getMeta, postCheckout } from '../mockupApi';
 import useAsync from '../helpers/hooks/useAsync';
 import useForm from '../helpers/hooks/useForm';
 import { useGlobalContext } from '../helpers/hooks/useGlobalContext';
+import CheckoutAlert from './CheckoutAlert';
+import { useState } from 'react';
 
 const ShippingDetails = () => {
     const navigate = useNavigate();
@@ -17,6 +19,7 @@ const ShippingDetails = () => {
         courier: '',
         payment: '',
     });
+    const [loadingBtn, isLoadingBtn] = useState(false);
 
     const isSubmitDisabled =
         Object.keys(payload).filter((key) => {
@@ -29,6 +32,7 @@ const ShippingDetails = () => {
 
     const fnSubmit = async (e) => {
         e.preventDefault();
+        isLoadingBtn(true);
         try {
             const res = await postCheckout({
                 ...payload,
@@ -40,9 +44,12 @@ const ShippingDetails = () => {
                 dispatch({
                     type: 'RESET_CART',
                 });
+                CheckoutAlert();
             }
         } catch (error) {
             console.log(error);
+        } finally {
+            isLoadingBtn(false);
         }
     };
 
@@ -180,10 +187,20 @@ const ShippingDetails = () => {
                     <div className="text-center">
                         <button
                             type="submit"
-                            disabled={!isSubmitDisabled}
-                            className="bg-pink-400 text-black hover:bg-black hover:text-pink-400 focus:outline-none w-full py-3 rounded-full text-lg focus:text-black transition-all duration-200 px-6"
+                            disabled={!isSubmitDisabled || loadingBtn}
+                            className="bg-pink-400 text-black hover:bg-black hover:text-pink-400 focus:outline-none w-full py-3 rounded-full text-lg transition-all duration-200 px-6 flex justify-center items-center gap-2"
                         >
-                            Checkout Now
+                            {loadingBtn ? (
+                                <>
+                                    <span
+                                        class="inline-block h-4 w-4 animate-spin rounded-full border-2 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                                        role="status"
+                                    ></span>
+                                    Processing...
+                                </>
+                            ) : (
+                                'Checkout Now'
+                            )}
                         </button>
                     </div>
                 </form>
